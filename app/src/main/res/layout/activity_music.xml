@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediumslateblue"
+    android:orientation="vertical" >
+
+
+
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParen">
+
+                <util.LrcView
+                    android:id="@+id/LyricShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="无歌曲播放"
+                    android:textColor="#99ffffff"/>
+
+
+
+
+
+<!--音量条--><LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/appbackground"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+
+
+                <SeekBar
+                    android:id="@+id/music_volume"
+                    android:layout_width="240dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:max="100"
+                    android:progress="50"
+                    android:splitTrack="false"
+                    android:progressDrawable="@drawable/media_player_progress_bg"
+                    android:thumb="@drawable/media_player_progress_button" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/music_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="依然爱你"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:layout_above="@id/music_singer"
+                        />
+
+                        <TextView
+                            android:id="@+id/music_singer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_above="@id/line1"
+                            android:text="王力宏" />
+
+
+
+
+
+
+        <!--歌曲播放进度条 -->
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/music_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="2dp"
+                    android:text="00:00"
+                    />
+
+                <SeekBar
+                    android:id="@+id/music_seekBar"
+                    android:layout_width="230dp"
+                    android:layout_height="20dp"
+                    android:max="100"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:splitTrack="false"
+                    android:progressDrawable="@drawable/media_player_progress_bg"
+                    android:thumb="@drawable/media_player_progress_button" />
+
+
+                <TextView
+                    android:id="@+id/music_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:text="03:20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+
+
+                <ImageButton
+                    android:id="@+id/music_rewind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/latest1" />
+
+                <ImageButton
+                    android:id="@+id/music_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/play1" />
+
+                <ImageButton
+                    android:id="@+id/music_foward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/next1" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
